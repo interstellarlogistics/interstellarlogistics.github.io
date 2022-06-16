@@ -120,7 +120,7 @@
             
             .container {
                 display: block;
-                width: 580px;
+                width: 680px;
                 margin: 30px auto;
                 padding: 20px;
                 border-radius: 20px;
@@ -222,8 +222,9 @@
             
             .info {
                 display: inline-block;
-                font-size: 17px;
+                font-size: 18px;
                 margin-top: 10px;
+                color: #aaa;
             }
 
             .copyButton {
@@ -259,6 +260,11 @@
                 animation-delay: 0.3s;
             }
 
+            .verticalSpacer {
+                display: block;
+                height: 10px;
+            }
+
             @keyframes fadeOut {
                 from {opacity: 1;}
                 to {opacity: 0;}
@@ -275,7 +281,7 @@
             
             
             <div class="title">Interstellar</div>
-            <div class="title2">Logistics<div class="copyright">&#8482;</div></div><!-- copyright: &#169; trademark: &#8482;-->
+            <div class="title2">Logistics<div class="copyright">&#8482;</div></div>
 
             <div class="inputContainer">
                 <div class="header">Contract to</div>
@@ -291,16 +297,12 @@
                 <div class="radioContainer">
                     <div class="radio">
                         <input type="radio" name="route" value=400 checked>
-                        <label for="route1">Jita/Perimeter &nbsp;&#8644;&nbsp; MJ-5F9 <b>(400isk per m3 + 1% collateral)</b></label>
+                        <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; MJ-5F9 <b>(400isk per m3 + 1% collateral)</b></label>
                     </div>
-                    <div class="radio">
-                        <input type="radio" name="route" value=700 checked>
-                        <label for="route1">Jita/Perimeter &nbsp;&#8644;&nbsp; T2-V8F <b>(700isk per m3 + 1% collateral)</b></label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="route" value=700>
-                        <label for="route3">MJ-5F9 &nbsp;&#8644;&nbsp; T2-V8F <b>(700isk per m3 + 1% collateral)</b></label>
-                    </div>
+                </div>
+                <div class="verticalSpacer"></div>
+                <div class="informationContainer">
+                    <div class="info">For other routes contact <b>Amelia#4098</b> on Discord.</div>
                 </div>
 
             </div>
@@ -340,8 +342,10 @@
                 </div>
                 <div class="informationContainer">&nbsp;</div>
                 <div class="informationContainer">&nbsp;</div>
+                <!--
                 <div class="info">For special inquiries contact <b>Amelia#4098</b> on Discord.</div>
                 </div>
+                -->
             </div>
 
             
