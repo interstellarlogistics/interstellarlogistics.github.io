@@ -24,10 +24,23 @@
 
             function calculator() {
 
+                //radio button
+                let iskperm3;
+                const radioButtons = document.querySelectorAll('input[name="route"]');
+
+                for (const radioButton of radioButtons) {
+                    if (radioButton.checked) {
+                        iskperm3 = radioButton.value;
+                        break;
+                    }
+                }
+
+                //calculate
                 var volume = AutoNumeric.getNumber('#volume');
                 var collateral = AutoNumeric.getNumber('#collateral');
-                var reward = Math.max(volume * 400 + collateral * 0.01, 5000000);
+                var reward = Math.max(volume * iskperm3 + collateral * 0.01, 5000000);
 
+                //set
                 $('#reward').html(AutoNumeric.format(reward, { currencySymbol: ' ISK', currencySymbolPlacement: 's',  decimalPlaces: 2 }));
 
             }
@@ -87,7 +100,7 @@
                 $('radio, input').on('change', calculator);
                 
                 new AutoNumeric('#volume', { minimumValue: 0, maximumValue: 370000, dotDecimalCharCommaSeparator:true, floatPos:true });
-                new AutoNumeric('#collateral', { minimumValue: 0, maximumValue: 50000000000, dotDecimalCharCommaSeparator:true, floatPos:true });
+                new AutoNumeric('#collateral', { minimumValue: 0, maximumValue: 25000000000, dotDecimalCharCommaSeparator:true, floatPos:true });
                 
             });
             
@@ -194,7 +207,7 @@
                 display: block;
                 font-size: 18px;
             }
-            
+
             .name {
                 display: inline-block;
                 font-size: 19px;
@@ -243,7 +256,7 @@
                 font-size: 18px;
                 color: #5cffc8;
                 animation: fadeOut 1s forwards;
-                animation-delay: 1s;
+                animation-delay: 0.3s;
             }
 
             @keyframes fadeOut {
@@ -277,14 +290,18 @@
                 <div class="header">Route</div>
                 <div class="radioContainer">
                     <div class="radio">
-                        <input type="radio" name="route" id="route1" checked>
-                        <label for="route1">Jita &#8674; MJ-5F9 <b>(400isk per m3 + 1% collateral)</b></label>
-                    </div>                
+                        <input type="radio" name="route" value=400 checked>
+                        <label for="route1">Jita/Perimeter &nbsp;&#8644;&nbsp; MJ-5F9 <b>(400isk per m3 + 1% collateral)</b></label>
+                    </div>
                     <div class="radio">
-                        <input type="radio" name="route" id="route2">
-                        <label for="route2">MJ-5F9 &#8674; Jita <b>(400isk per m3 + 1% collateral)</b></label>
-                    </div>                
-                </div>                
+                        <input type="radio" name="route" value=700 checked>
+                        <label for="route1">Jita/Perimeter &nbsp;&#8644;&nbsp; T2-V8F <b>(700isk per m3 + 1% collateral)</b></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="route" value=700>
+                        <label for="route3">MJ-5F9 &nbsp;&#8644;&nbsp; T2-V8F <b>(700isk per m3 + 1% collateral)</b></label>
+                    </div>
+                </div>
 
             </div>
             
@@ -298,7 +315,7 @@
             
             <div class="inputContainer">
                 <div class="header">Collateral</div>
-                <div class="headerExplanation">(50,000,000,000 ISK max)</div>
+                <div class="headerExplanation">(25,000,000,000 ISK max)</div>
                 <div class="informationContainer">
                     <input type="text" id="collateral" value="0">
                 </div>
