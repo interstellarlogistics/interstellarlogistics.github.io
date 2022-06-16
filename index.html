@@ -101,7 +101,8 @@
             }
             
             body {
-                background-color: #2A2A2A;
+                background-color: #221f3e;
+                background: linear-gradient(to top, #221f3e 0%, #262345 100%);
             }
             
             .container {
@@ -111,20 +112,40 @@
                 margin-top: 30px;
                 padding: 20px;
                 border-radius: 20px;
-                background-color: #111;
+                background-color: #13111c;
+                box-shadow: 30px 30px 250px -50px #5cffc822;
             }
 
             .title {
                 display: inline-block;
-                margin: 20px;
-                margin-bottom: 30px;
-                margin-top: 10px;
+                background: linear-gradient(to top, #5cffc8aa 0%, transparent 50%);
+                margin: 10px 20px 0px 20px;
+                padding: 0px 3px;
                 font-family: "Georgia", Georgia, sans-serif;
                 font-size: 80px;
                 font-style: italic;
                 font-weight: 600;
             }
             
+            .title2 {
+                display: inline-block;
+                background: linear-gradient(to top, #5cffc8aa 0%, transparent 50%);
+                margin: 0px 20px 30px 20px;
+                padding: 0px 3px;
+                font-family: "Georgia", Georgia, sans-serif;
+                font-size: 80px;
+                font-style: italic;
+                font-weight: 600;
+            }
+
+            .copyright {
+                display: inline;
+                font-size: 20px;
+                vertical-align: text-top;
+                line-height: 3em;
+
+            }
+
             .inputContainer {
                 display: block;
                 padding: 20px;
@@ -132,18 +153,9 @@
             
             .header {
                 display: inline;
-                background: linear-gradient(to top, #666 35%, transparent 35%);
+                background: linear-gradient(to top, #666 0%, transparent 50%);
                 font-family: "Georgia", Georgia, sans-serif;
-                font-size: 28px;
-                font-style: italic;
-                font-weight: 600;
-            }
-            
-            .header2 {
-                display: inline;
-                background: linear-gradient(to top, #666 35%, transparent 35%);
-                font-family: "Georgia", Georgia, sans-serif;
-                font-size: 28px;
+                font-size: 32px;
                 font-style: italic;
                 font-weight: 600;
             }
@@ -184,12 +196,24 @@
                 font-size: 18px;
             }
             
+            .name {
+                display: inline-block;
+                font-size: 19px;
+                margin-top: 10px;
+            }
+
             .reward {
                 display: inline-block;
-                font-size: 18px;
+                font-size: 19px;
                 margin-top: 10px;
             }
             
+            .info {
+                display: inline-block;
+                font-size: 17px;
+                margin-top: 10px;
+            }
+
             .copyButton {
                 user-select: none;
                 -moz-user-select: none;
@@ -238,12 +262,13 @@
         <div class="container">
             
             
-            <div class="title">Interstellar Logistics</div>
+            <div class="title">Interstellar</div>
+            <div class="title2">Logistics<div class="copyright">&#8482;</div></div><!-- copyright: &#169; trademark: &#8482;-->
 
             <div class="inputContainer">
-                <div class="header2">Contract to</div>
+                <div class="header">Contract to</div>
                 <div class="informationContainer">
-                    <div class="reward" id="name">Interstellar Space Pilot</div>
+                    <div class="name" id="name">Interstellar Space Pilot</div>
                     <div class="copyButton" onclick="copyTextToClipboard('name','nameConfirmation')">Copy to clipboard</div>
                     <div class="copyConfirmation" id="nameConfirmation"></div>
                 </div>
@@ -281,7 +306,7 @@
             </div>
             
             <div class="inputContainer">
-                <div class="header2">Reward</div>
+                <div class="header">Reward</div>
                 <div class="informationContainer">
                     <div class="reward" id="reward">5,000,000.00 ISK</div>
                     <div class="copyButton" onclick="copyTextToClipboard('reward','rewardConfirmation')">Copy to clipboard</div>
@@ -290,16 +315,16 @@
             </div>
             
             <div class="inputContainer">
-                <div class="header2">Contract Information</div>
+                <div class="header">Contract Information</div>
                 <div class="informationContainer">
-                    <div class="reward">Expiration: 1 Week</div>
+                    <div class="info">Expiration: 1 Week</div>
                 </div>
                 <div class="informationContainer">
-                    <div class="reward">Days to complete: 3 days</div>
+                    <div class="info">Days to complete: 3 days</div>
                 </div>
                 <div class="informationContainer">&nbsp;</div>
                 <div class="informationContainer">&nbsp;</div>
-                <div class="reward">For inquiries contact <b>Amelia#4098</b> on Discord.</div>
+                <div class="info">For special inquiries contact <b>Amelia#4098</b> on Discord.</div>
                 </div>
             </div>
 
