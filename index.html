@@ -100,7 +100,7 @@
                 $('radio, input').on('change', calculator);
                 
                 new AutoNumeric('#volume', { minimumValue: 0, maximumValue: 370000, dotDecimalCharCommaSeparator:true, floatPos:true });
-                new AutoNumeric('#collateral', { minimumValue: 0, maximumValue: 25000000000, dotDecimalCharCommaSeparator:true, floatPos:true });
+                new AutoNumeric('#collateral', { minimumValue: 0, maximumValue: 50000000000, dotDecimalCharCommaSeparator:true, floatPos:true });
                 
             });
             
@@ -321,7 +321,7 @@
             
             <div class="inputContainer">
                 <div class="header">Collateral</div>
-                <div class="headerExplanation">(25,000,000,000 ISK max)</div>
+                <div class="headerExplanation">(50,000,000,000 ISK max)</div>
                 <div class="informationContainer">
                     <input type="text" id="collateral" value="0">
                 </div>
