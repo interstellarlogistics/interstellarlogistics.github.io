@@ -13,11 +13,11 @@
 
                 const queryOpts = { name: 'clipboard-write', allowWithoutGesture: false };
                 const permissionStatus = await navigator.permissions.query(queryOpts);
-                console.log(permissionStatus.state);
+                console.log("permissionStatus.state: " + permissionStatus.state);
 
                 // Listen for changes to the permission state
                 permissionStatus.onchange = () => {
-                    console.log(permissionStatus.state);
+                    console.log("permissionStatus.state: " + permissionStatus.state);
                 };
 
             }
@@ -251,16 +251,16 @@
             }
 
             .copyButton:active {
-                background-color: #5cffc8;
+                background-color: #d5fff1;
             }
 
             .copyConfirmation {
                 display: inline-block;
                 margin-left: 12px;
                 font-size: 18px;
-                color: #5cffc8;
+                color: hotpink;
                 animation: fadeOut 1s forwards;
-                animation-delay: 0.3s;
+                animation-delay: 1.0s;
             }
 
             .verticalSpacer {
@@ -271,6 +271,10 @@
             @keyframes fadeOut {
                 from {opacity: 1;}
                 to {opacity: 0;}
+            }
+
+            label b {
+                color: #5cffc8;
             }
 
         </style>
@@ -300,15 +304,15 @@
                 <div class="radioContainer">
                     <div class="radio">
                         <input type="radio" name="route" value=300 checked>
-                        <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; MJ-5F9 <b>(300isk per m3 + 1% collateral)</b></label>
+                        <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; MJ-5F9 (<b>300isk</b> per m3 + 1% collateral)</label>
                     </div>
                     <div class="radio">
                         <input type="radio" name="route" value=350>
-                        <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; R1O-GN <b>(350isk per m3 + 1% collateral)</b></label>
+                        <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; R1O-GN (<b>350isk</b> per m3 + 1% collateral)</label>
                     </div>
                     <div class="radio">
                         <input type="radio" name="route" value=50>
-                        <label for="route1">R1O-GN &nbsp;&#8644;&nbsp; MJ-5F9 <b>(50isk per m3 + 1% collateral)</b></label>
+                        <label for="route1">R1O-GN &nbsp;&#8644;&nbsp; MJ-5F9 (<b>50isk</b> per m3 + 1% collateral)</label>
                     </div>
 
                 </div>
