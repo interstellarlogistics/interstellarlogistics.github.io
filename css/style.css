@@ -1,0 +1,183 @@
+* {
+    font-family: sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #221f3e;
+    background: linear-gradient(to top, #221f3e 0%, #262345 100%);
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 30px 30px 250px -50px #5cffc811;
+}
+
+.container {
+    display: block;
+    width: 680px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #13111c;
+    box-shadow: 30px 30px 250px -50px #5cffc822;
+}
+
+.title {
+    display: inline-block;
+    background: linear-gradient(to top, #5cffc8aa 0%, transparent 50%);
+    margin: 10px 20px 0px 20px;
+    padding: 0px 3px;
+    font-family: "Georgia", Georgia, sans-serif;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.title2 {
+    display: inline-block;
+    background: linear-gradient(to top, #5cffc8aa 0%, transparent 50%);
+    margin: 0px 20px 30px 20px;
+    padding: 0px 3px;
+    font-family: "Georgia", Georgia, sans-serif;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.copyright {
+    display: inline;
+    font-size: 20px;
+    vertical-align: text-top;
+    line-height: 3em;
+
+}
+
+.inputContainer {
+    display: block;
+    padding: 20px;
+}
+
+.header {
+    display: inline;
+    background: linear-gradient(to top, #666 0%, transparent 50%);
+    font-family: "Georgia", Georgia, sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.headerExplanation {
+    display: inline;
+    margin-left: 5px;
+    font-family: "Georgia", Georgia, sans-serif;
+    font-size: 18px;
+}
+
+.informationContainer {
+    display: block;
+}
+
+input {
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 15px;
+    color: black;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #000;
+}
+
+.radioContainer {
+    display: block;
+    margin-top: 0px;
+}
+
+.radio {
+    display: block;
+    font-size: 18px;
+}
+
+.name {
+    display: inline-block;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.reward {
+    display: inline-block;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.info {
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #fff9;
+}
+
+.copyButton {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #5cffc8;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.copyButton:hover {
+    background-color: #99ffdd;
+}
+
+.copyButton:active {
+    background-color: #d5fff1;
+}
+
+.copyConfirmation {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 18px;
+    color: hotpink;
+    animation: fadeOut 1s forwards;
+    animation-delay: 1.0s;
+}
+
+.verticalSpacer {
+    display: block;
+    height: 10px;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+label b {
+    color: #5cffc8;
+}
+
+div b {
+    color: #5cffc8;
+}
+
+div a {
+    color: #5cffc8;
+}
+
+.smiley {
+    display: inline;
+    font-size: 24px;
+}
