@@ -78,7 +78,11 @@
                 getClipboardPermission();
 
                 $("#" + confirmationDivID)[0].style.display = "none";
-                text = $("#" + divID).html();
+                if($("#" + divID).is("input")) {
+                    text = $("#" + divID).val() + " ISK";
+                } else {
+                    text = $("#" + divID).html();
+                }
                 
                 if (!navigator.clipboard) {
                     fallbackCopyTextToClipboard(text,confirmationDivID);
@@ -94,7 +98,7 @@
                 });
                 
             }
-            
+
             $(function() {
                 
                 $('radio, input').on('change', calculator);
@@ -176,9 +180,8 @@
                 display: inline;
                 margin-left: 5px;
                 font-family: "Georgia", Georgia, sans-serif;
-                font-size: 16px;
+                font-size: 18px;
             }
-
             
             .informationContainer {
                 display: block;
@@ -299,6 +302,15 @@
                         <input type="radio" name="route" value=300 checked>
                         <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; MJ-5F9 <b>(300isk per m3 + 1% collateral)</b></label>
                     </div>
+                    <div class="radio">
+                        <input type="radio" name="route" value=350>
+                        <label for="route1">Jita / Perimeter &nbsp;&#8644;&nbsp; R1O-GN <b>(350isk per m3 + 1% collateral)</b></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="route" value=50>
+                        <label for="route1">R1O-GN &nbsp;&#8644;&nbsp; MJ-5F9 <b>(50isk per m3 + 1% collateral)</b></label>
+                    </div>
+
                 </div>
                 <div class="verticalSpacer"></div>
                 <div class="informationContainer">
@@ -320,6 +332,8 @@
                 <div class="headerExplanation">(50,000,000,000 ISK max)</div>
                 <div class="informationContainer">
                     <input type="text" id="collateral" value="0">
+                    &nbsp;<div class="copyButton" onclick="copyTextToClipboard('collateral','collateralConfirmation')">Copy to clipboard</div>
+                    <div class="copyConfirmation" id="collateralConfirmation"></div>
                 </div>
             </div>
             
