@@ -27,7 +27,7 @@ function calculator() {
     //calculate
     var volume = AutoNumeric.getNumber('#volume');
     var collateral = AutoNumeric.getNumber('#collateral');
-    var reward = Math.max(volume * iskperm3 + collateral * 0.01, 10000000);
+    var reward = Math.max(volume * iskperm3 + collateral * 0.01, 5000000);
 
     //set
     $('#reward').html(AutoNumeric.format(reward, { currencySymbol: ' ISK', currencySymbolPlacement: 's',  decimalPlaces: 2 }));
