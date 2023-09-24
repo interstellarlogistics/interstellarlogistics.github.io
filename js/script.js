@@ -93,6 +93,6 @@ $(function() {
     $('radio, input').on('change', calculator);
     
     new AutoNumeric('#volume', { minimumValue: 0, maximumValue: 370000, dotDecimalCharCommaSeparator:true, floatPos:true });
-    new AutoNumeric('#collateral', { minimumValue: 0, maximumValue: 50000000000, dotDecimalCharCommaSeparator:true, floatPos:true });
+    new AutoNumeric('#collateral', { minimumValue: 0, maximumValue: 100000000000, dotDecimalCharCommaSeparator:true, floatPos:true });
     
 });
